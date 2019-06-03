@@ -14,8 +14,8 @@ __all__ = ['app']
 
 #: WSGI endpoint
 app = create_app()
-app.wsgi_app = ProxyFix(app, x_for=1, x_host=1)
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_host=1)
 
 if app.config.get('PROFILING', False):
     app.wsgi_app = ProfilerMiddleware(
-        app, profile_dir=app.config['PROFILING_DIR'])
+        app.wsgi_app, profile_dir=app.config['PROFILING_DIR'])

@@ -22,5 +22,5 @@ class OrderSchema(Schema):
     user = fields.Nested(UserSchema)
 
 
-order_schema_data = OrderSchema(strict=True, many=True)
+order_schema_data = OrderSchema(strict=True)
 

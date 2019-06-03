@@ -9,13 +9,12 @@ from tasks import make_celery
 
 
 blueprints = [
-    'src.middlewares.cross_domain:bp',
     'src.middlewares.auto_commit:bp',
     'src.views.api.v1.order:bp',
 ]
 
 extensions = [
-    'source.ext:db',
+    'src.ext:db',
 ]
 
 collected_loggers = [
