@@ -1,0 +1,23 @@
+# py
+*.pyc
+*~
+
+
+# in dev
+/venv
+y
+y.pub
+
+# IDE
+.idea
+.vscode
+
+# env
+.env
+
+# migrations
+/migrations
+
+.DS_Store
+# history
+.history/
